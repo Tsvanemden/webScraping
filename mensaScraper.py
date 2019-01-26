@@ -51,11 +51,8 @@ bsObj = BeautifulSoup(html.read(), "html5lib")
 tag = bsObj.find("a", {"name":"heute"})
 heute = tag.find_parent().find('strong').get_text()
 
-# REMOVE FOR REAL EMAIL
-today = heute
-
-# CHANGE 5 INTO 4!!!
-if dayOfWeek > 5:
+# 
+if dayOfWeek > 4:
     pass
 elif heute != today:
     emailText = str("Hi there," + "\n" + "Bad news: The mensa is closed today!")
