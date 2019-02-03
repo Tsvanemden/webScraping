@@ -85,7 +85,7 @@ df = pd.read_csv('../emailAddresses/mensaScraperEmailList.csv')
 recipients = df.email_address.tolist()
     
 fromaddr = "Mensa.Alerts089@gmail.com"
-toaddr = ["thomas_900@msn.com"]
+toaddr = ["thomas.vanemden@bmc.med.lmu.de"]
 toBcc = recipients
 msg = MIMEMultipart()
 msg['From'] = fromaddr
