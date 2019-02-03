@@ -52,10 +52,10 @@ bsObj = BeautifulSoup(html.read(), "html5lib")
 tag = bsObj.find("a", {"name":"heute"})
 heute = tag.find_parent().find('strong').get_text()
 
-today = heute
+#today = heute
 
 # doing the work
-if dayOfWeek > 8:
+if dayOfWeek > 4:
     pass
 elif heute != today:
     emailText = str("Hi there," + "\n" + "Bad news: The mensa is closed today!")
@@ -81,7 +81,7 @@ else :
 #print(emailText)
 
 # Set up the email
-df = pd.read_csv('testMensaScraperEmailList.csv')
+df = pd.read_csv('../emailAddresses/mensaScraperEmailList.csv')
 recipients = df.email_address.tolist()
     
 fromaddr = "Mensa.Alerts089@gmail.com"
