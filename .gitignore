@@ -1,0 +1,6 @@
+webscraping/bin/
+webscraping/include/
+webscraping/lib
+webscraping/mensaScraperEmailList.csv
+webscraping/testMensaScraperEmailList.csv
+
